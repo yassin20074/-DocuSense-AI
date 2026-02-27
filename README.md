@@ -1,38 +1,21 @@
-#sanadDocuScan AI Pro
+# 📄 DocuSense AI: Intelligent Document Processing
 
-**DocuScan AI Pro** is a professional document analysis system that combines **OCR** and **NLP** to extract, analyze, and summarize text from images or scanned documents. The project is designed with a modular architecture suitable for production-level deployments.
+**DocuSense AI** is a high-performance pipeline that converts unstructured document images into structured data using **Computer Vision (OpenCV)** and **Transformers (NLP)**.
 
----
 
-## 🌟 Key Features
 
-- **Advanced OCR:** Uses OpenCV for preprocessing and `pytesseract` for high-accuracy text extraction.
-- **NER & Summarization:** Utilizes HuggingFace Transformers (BERT for NER, BART for summarization) to extract entities and generate concise summaries.
-- **FastAPI Integration:** Fully functional API to upload and analyze documents in real-time.
-- **Structured Output:** Returns JSON with extracted text, named entities, and a summarized version.
-- **Modular Architecture:** Core modules are separated for maintainability and scalability.
-- **Production Ready:** Can be easily extended with logging, database storage, and asynchronous processing.
+## 🎯 Key Capabilities
+- **In-Memory Logic:** Processing via `io.BytesIO` for maximum speed and security (RAM-only).
+- **Advanced OCR Tuning:** OpenCV-based noise reduction and thresholding for high-accuracy text extraction.
+- **Deep NLP Analysis:** - **Entity Extraction:** Named Entity Recognition (NER) mapped to human-readable labels.
+  - **Abstractive Summarization:** Condensing long documents into key insights using BART.
 
----
+## 🛠️ Tech Stack
+- **Backend:** FastAPI (Asynchronous)
+- **Vision & OCR:** OpenCV, Tesseract, Pillow
+- **NLP Models:** HuggingFace Transformers (BERT, BART)
 
-## 📁 Project Structure
-
-```text
-── ocr_model.py       # OCR pipeline (OpenCV + Tesseract)
-── nlp_model.py       # NLP pipeline (NER + Summarization)
-├── main.py                # FastAPI server and endpoints
-├── requirements.txt       # Python dependencies
-└── README.md
-
-## 🛠️ Technical Stack
-Language: Python 3.10+
-OCR: pytesseract, OpenCV, PIL
-NLP: Transformers (BERT & BART)
-API: FastAPI
-Data Processing: NumPy
-Deployment: Compatible with local, Colab, or cloud servers
-
-## 📊 Output Example
+# Output Example
 {
   "filename": "document.png",
   "extracted_text": "Full text from the document...",
@@ -43,12 +26,12 @@ Deployment: Compatible with local, Colab, or cloud servers
   "summary": "This document talks about John Doe's work at Google..."
 }
 
-## 🏗️ Future Improvements
+
+# Future Improvements
 Add logging for production monitoring.
 Integrate database storage for document history.
 Support bulk uploads and async processing.
 Improve security checks on uploaded files.
 
-# made by: yassin sanad
+# made by: eng.yassin sanad 
 
- aassaassaassaab
